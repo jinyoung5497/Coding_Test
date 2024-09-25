@@ -1,4 +1,4 @@
-str = list(input())
+str = input()
 stack = []
 
 answer = 0
