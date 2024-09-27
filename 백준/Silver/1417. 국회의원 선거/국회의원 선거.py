@@ -13,7 +13,7 @@ for i in range(num):
 
 while heap:
     votes = -heapq.heappop(heap)
-    if votes < my_votes:
+    if my_votes > votes:
         break
     my_votes += 1
     count += 1
