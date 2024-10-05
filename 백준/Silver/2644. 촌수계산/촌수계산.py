@@ -11,8 +11,6 @@ for _ in range(m):
     relationship[a].append(b)
     relationship[b].append(a)
 
-for i in relationship:
-    i.sort()
 
 def dfs(x, y, relationship, visited, count):
     visited[x] = True
@@ -27,4 +25,3 @@ def dfs(x, y, relationship, visited, count):
 
 
 print(dfs(x, y, relationship, visited, 0))
-
