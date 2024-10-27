@@ -18,10 +18,9 @@ def solution(n, wires):
         while queue:
             first_node = queue.popleft()
             for j in network[first_node]:
-                if not visited[j]:
-                    if first_node not in broken_node or j not in broken_node:
-                        visited[j] = True
-                        queue.append(j)
+                if not visited[j] and (first_node not in broken_node or j not in broken_node):
+                    visited[j] = True
+                    queue.append(j)
         visited_node.append(sum(visited))
 
     # 1 1 3 8 8 6 8 8
