@@ -1,11 +1,8 @@
-from collections import deque
 from sys import stdin
 
-testCase = int(input())
+num_of_tests = int(stdin.readline())
 
-for _ in range(testCase):
+for _ in range(num_of_tests):
     n, m = map(int, stdin.readline().split())
-    for _ in range(m):
-        a, b = map(int, stdin.readline().split())
+    empty = [list(map(int, stdin.readline().split())) for i in range(m)]
     print(n - 1)
-
