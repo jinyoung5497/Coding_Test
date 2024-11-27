@@ -14,6 +14,6 @@ for i in reversed_coins:
         break
     if i <= k:
         count += k // i
-        k -= i * (k // i)
+        k %= i
 
 print(count)
