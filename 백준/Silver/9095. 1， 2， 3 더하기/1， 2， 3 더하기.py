@@ -5,13 +5,14 @@ input = stdin.readline
 
 n = int(input())
 test = [int(input()) for _ in range(n)]
-num = [1, 2, 3]
-for i in test:
-    count = 0
-    for j in range(i):
-        pos = product(num, repeat=j+1)
-        for p in pos:
-            if sum(p) == i:
-                count += 1
-    print(count)
 
+big_num = max(test)
+dp = [0] * (big_num+1)
+dp[1] = 1
+dp[2] = 2
+dp[3] = 4
+for i in range(4, big_num+1):
+    dp[i] = dp[i-1] + dp[i-2] + dp[i-3]
+
+for i in test:
+    print(dp[i])
