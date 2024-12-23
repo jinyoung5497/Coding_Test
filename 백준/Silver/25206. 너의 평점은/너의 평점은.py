@@ -19,13 +19,12 @@ grades = {
 }
 
 total_credit = 0
-total_grade = 0
 subject_grade= 0
 
 for subject, credit, grade in cs:
     if grade == 'P':
         continue
-    total_grade += grades[grade]
     total_credit += int(credit[0])
     subject_grade += grades[grade] * int(credit[0])
+
 print(subject_grade / total_credit)
